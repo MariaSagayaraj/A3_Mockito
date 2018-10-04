@@ -16,9 +16,9 @@ public class EmployeeTest {
 	IEmployee interfaceobj;
 	
 // Declaring the variables used for testing----> Tax and kiwisaver percentages are approximately taken
-	int salary=30000;
-	double tax=0.4;
-	double kiwisaver=0.3;
+	int salary=40000;
+	double tax=0.04;
+	double kiwisaver=0.03;
 	int totalnumberofweeks=52;
 	
 //(b) Initialize and instantiate the object and the variables in the setUp()method. 
@@ -29,7 +29,12 @@ public class EmployeeTest {
 //(c) Creating mock object
 		interfaceobj=Mockito.mock(IEmployee.class);
 		
+		Mockito.when(interfaceobj.computeTax(classobj.getsalary())).thenReturn((double) (40000));
+		Mockito.when(interfaceobj.weeklysalary(classobj)).thenReturn(2576.07);
+		Mockito.when(interfaceobj.fortnightsalary(classobj)).thenReturn(4675.30);
+		Mockito.when(interfaceobj.computekiwisaver(classobj)).thenReturn(213.76);
 		
+	classobj.setobj(interfaceobj);
 		
 	}
 
