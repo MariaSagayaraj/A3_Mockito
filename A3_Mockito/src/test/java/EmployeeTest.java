@@ -29,10 +29,10 @@ public class EmployeeTest {
 //(c) Creating mock object
 		interfaceobj=Mockito.mock(IEmployee.class);
 		
-		Mockito.when(interfaceobj.computeTax(classobj.getsalary())).thenReturn((double) (40000));
-		Mockito.when(interfaceobj.weeklysalary(classobj)).thenReturn(2576.07);
-		Mockito.when(interfaceobj.fortnightsalary(classobj)).thenReturn(4675.30);
-		Mockito.when(interfaceobj.computekiwisaver(classobj)).thenReturn(213.76);
+		Mockito.when(interfaceobj.computeTax(classobj.getsalary())).thenReturn((double) (1600));
+		Mockito.when(interfaceobj.weeklysalary(classobj)).thenReturn(769.0);
+		Mockito.when(interfaceobj.fortnightsalary(classobj)).thenReturn(1538.0);
+		Mockito.when(interfaceobj.computekiwisaver(classobj)).thenReturn(25641.02);
 		
 	classobj.setobj(interfaceobj);
 		

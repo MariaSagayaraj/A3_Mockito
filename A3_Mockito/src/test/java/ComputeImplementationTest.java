@@ -22,14 +22,14 @@ public class ComputeImplementationTest {
 
 	@Before
 	public void setUp() throws Exception {
-		n1 = 12;
+		n1 = 2;
 		n2 = 6;
 		implementationobj = new ComputeImplementation();
 		
 		//Mock object initialisation
 		
 		interfaceobj = Mockito.mock(ICompute.class);
-		Mockito.when(interfaceobj.multiply(n1, n2)).thenReturn(72);
+		Mockito.when(interfaceobj.multiply(n1, n2)).thenReturn(12);
 		implementationobj.setobj(interfaceobj);
 		
 	}
@@ -39,14 +39,10 @@ public class ComputeImplementationTest {
 		implementationobj=null;
 		interfaceobj=null;
 	}
-
-	@Test
-	public void testsquare() {
-		fail("Not yet implemented");
-	}
+		
 	@Test
 	public void testmultiply() {
-		assertEquals(72, implementationobj.multiply(n1,n2));
+		assertEquals(12, implementationobj.multiply(n1,n2));
 		
 	}
 
